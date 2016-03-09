@@ -6,18 +6,43 @@
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/stylesheets/application.css">
+  <!-- Normalize -->
+  <link rel="stylesheet" href="/stylesheets/css/normalize.css">
+  <!-- Open Sans Font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+  <!-- Obvious buttons -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/css/obvious-buttons.css">
+  <!-- Pikaday date picker -->
+  <link rel="stylesheet" href="/stylesheets/css/pikaday.css">
+  <!-- SpinKit loading animation -->
+  <link rel="stylesheet" href="/stylesheets/css/spinkit.css">
+  <!-- Octicons -->
+  <link rel="stylesheet" href="/octicons/octicons.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/stylesheets/css/application.css">
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+  <!-- Moment.JS for date picker -->
+  <script src="/javascript/moment.js"></script>
+  <!-- Pikaday date picker -->
+  <script src="/javascript/pikaday.js"></script>
+  <!-- Custom JS -->
   <script src="/javascript/application.js"></script>
 
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <div class='loading-container'>
+    <div class='loading-div'></div>
+    <div class="sk-rotating-plane"></div>
+  </div>
+  <div class='container'>
+    <%= yield %>
+  </div>
 </body>
 </html>

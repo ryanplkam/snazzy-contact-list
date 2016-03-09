@@ -1,1 +1,44 @@
-<h1>Home Page</h1>
+<div class='row'>
+  <div class='col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 text-center'>
+    <h1>Ryan's Contact List App</h1>
+  </div>
+</div>
+<div class='row'>
+
+  <div class='sidebar col-lg-3 col-lg-offset-1 col-md-5 col-md-offset-1 text-center'>
+    <button class='view-all-btn btn btn-warning btn-block'>View all</button>
+    <hr>
+    <div class="form-group">
+      <input type="text" class="create form-control new-first-name" placeholder="First name">
+    </div>
+    <div class="form-group">
+      <input type="text" class="create form-control new-last-name" placeholder="Last name">
+    </div>
+    <div class="form-group">
+      <input type="text" class="create form-control new-DOB" id='datepicker'placeholder="DOB">
+    </div>
+    <div class="form-group">
+      <input type="text" class="create form-control new-email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="text" class="create form-control new-occupation" placeholder="Occupation">
+    </div>
+    <button class='create-btn btn btn-warning btn-block'>Add contact</button>
+    <hr>
+    <div class="form-group">
+      <input type="text" class="search form-control" id="search-param" placeholder="Name / Email / Address">
+    </div>
+    <button class="search-btn btn btn-warning btn-block">Search</button>
+  </div>
+
+  <div class='contacts-body col-lg-7 col-md-5'>
+  </div>
+
+</div>
+
+<script>
+    var picker = new Pikaday({ 
+      field: $('#datepicker')[0],
+      yearRange: 50
+    });
+</script>

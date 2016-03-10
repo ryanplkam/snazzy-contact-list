@@ -34,7 +34,5 @@ post '/contacts/create' do
 end
 
 delete '/contacts/destroy' do
-
   Contact.find(params[:contactID]).destroy
-
 end

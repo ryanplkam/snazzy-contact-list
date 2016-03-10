@@ -3,6 +3,25 @@ $background-color: #D9D9D9;
 $text-color: #373A3C;
 $highlight-color: #FF8552;
 
+// Breakpoint mixins
+@mixin bp-xs {
+  @media only screen and (max-width: 543px) {
+    @content;
+  }
+}
+
+@mixin bp-sm {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin bp-md {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
 // Fonts
 @font-face {
     font-family: 'Franchise-Bold';
@@ -66,12 +85,23 @@ body {
   h1 {
     font-family: 'Franchise-Bold';
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 76px;
     margin: 20px 0;
+    @include bp-md {
+      font-size: 70px;
+    } 
+    @include bp-sm {
+      font-size: 66px;
+      margin: 10px 0;
+    }
+    @include bp-xs {
+      font-size: 52px;
+      margin: 10px 0 5px;
+    }
   }
   .sidebar {
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     .btn {
       font-size: 24px!important;
       font-family: 'Lobster Two';
@@ -81,6 +111,12 @@ body {
     .form-group {
       margin-bottom: 10px;
     }  
+    hr:last-of-type {
+      visibility: hidden;
+      @include bp-sm {
+        visibility: visible;
+      }
+    }
   }
   .contacts-body {
     padding-bottom: 10px;
@@ -89,9 +125,22 @@ body {
       .card-header {
         margin-bottom: 0;
         .octicon {
+          font-size: 18px;
           line-height: 30.8px;
           cursor: pointer;
+          margin-left: 15px;
         }  
+      }
+      h4 {
+        font-weight: 700;
+        font-size: inherit;
+        width: 120px;
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+      p {
+        display: inline-block;
+        margin-bottom: 0px;
       }
     }  
   }

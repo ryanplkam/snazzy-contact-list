@@ -92,8 +92,8 @@ $(document).ready(function() {
       type: 'put',
       data: {
         newDOB: contactNewDOB,
-        newEmail: contactNewOccupation,
-        newOccupation: contactNewEmail
+        newOccupation: contactNewOccupation,
+        newEmail: contactNewEmail
       },
       success: function() {
         contactsShow(callback)

@@ -61,6 +61,9 @@ body {
       body h1 {
         font-size: 52px;
         margin: 10px 0 5px; } }
+    body h1:after {
+      content: '\270C';
+      transition: 1s; }
   body .sidebar {
     height: 100%;
     margin-bottom: 10px; }
@@ -76,25 +79,25 @@ body {
       @media only screen and (max-width: 767px) {
         body .sidebar hr:last-of-type {
           visibility: visible; } }
-  body .contacts-body {
-    padding-bottom: 10px; }
-    body .contacts-body .card {
-      margin: 10px 0; }
-      body .contacts-body .card .card-header {
-        margin-bottom: 0; }
-        body .contacts-body .card .card-header .octicon {
-          font-size: 18px;
-          line-height: 30.8px;
-          cursor: pointer;
-          margin-left: 15px; }
-      body .contacts-body .card h4 {
-        font-weight: 700;
-        font-size: inherit;
-        width: 120px;
-        display: inline-block;
-        margin-bottom: 0px; }
-      body .contacts-body .card p {
-        display: inline-block;
-        margin-bottom: 0px; }
+  body .contacts-body .card {
+    margin: 10px 0; }
+    body .contacts-body .card .card-header {
+      margin-bottom: 0; }
+      body .contacts-body .card .card-header .octicon {
+        font-size: 18px;
+        line-height: 30.8px;
+        cursor: pointer;
+        margin-left: 15px; }
+    body .contacts-body .card h4 {
+      font-weight: 700;
+      font-size: inherit;
+      width: 120px;
+      display: inline-block;
+      margin-bottom: 0px; }
+    body .contacts-body .card p {
+      display: inline-block;
+      margin-bottom: 0px; }
+  body footer p {
+    font-size: 14px; }
 
 /*# sourceMappingURL=application.css.map */

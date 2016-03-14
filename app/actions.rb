@@ -12,7 +12,12 @@ end
 
 get '/contacts/search.json' do
   content_type :json
-  @contacts = Contact.where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?",
+  @contacts = Contact.where("
+    first_name LIKE ?
+    OR last_name LIKE ?
+    OR occupation LIKE ?
+    OR email LIKE ?",
+    "%#{params[:searchParam]}%",
     "%#{params[:searchParam]}%",
     "%#{params[:searchParam]}%",
     "%#{params[:searchParam]}%"
@@ -20,7 +25,7 @@ get '/contacts/search.json' do
   @contacts.to_json
 end 
 
-post '/contacts/create' do 
+post '/contacts' do 
   # Parse the string DOB into something usable by ActiveRecord
   parsedDOB = params[:newDOB][0,4] + params[:newDOB][5,2] + params[:newDOB][8,2]
 
@@ -31,6 +36,17 @@ post '/contacts/create' do
     email: params[:newEmail],
     occupation: params[:newOccupation]
    )
+end
+
+put '/contacts/:id' do
+  parsedDOB = params[:newDOB][0,4] + params[:newDOB][5,2] + params[:newDOB][8,2]  
+  @contact = Contact.find(params[:id])
+  @contact.attributes = {
+    date_of_birth: parsedDOB,
+    email: params[:newEmail],
+    occupation: params[:newOccupation]
+  }
+  @contact.save
 end
 
 delete '/contacts/destroy' do

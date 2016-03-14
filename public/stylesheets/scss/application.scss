@@ -1,9 +1,9 @@
-// SASS variables
+// COLORS
 $background-color: #D9D9D9;
 $text-color: #373A3C;
 $highlight-color: #FF8552;
 
-// Breakpoint mixins
+// BREAKPOINT MIXINS
 @mixin bp-xs {
   @media only screen and (max-width: 543px) {
     @content;
@@ -22,7 +22,7 @@ $highlight-color: #FF8552;
   }
 }
 
-// Fonts
+// FONTS
 @font-face {
     font-family: 'Franchise-Bold';
     src: url('../../fonts/Franchise-Bold.ttf') format('truetype');
@@ -98,6 +98,10 @@ body {
       font-size: 52px;
       margin: 10px 0 5px;
     }
+    &:after {
+      content:'\270C';
+      transition: 1s;
+    }
   }
   .sidebar {
     height: 100%;
@@ -119,7 +123,6 @@ body {
     }
   }
   .contacts-body {
-    padding-bottom: 10px;
     .card {
       margin: 10px 0;
       .card-header {
@@ -143,5 +146,10 @@ body {
         margin-bottom: 0px;
       }
     }  
+  }
+  footer {
+    p {
+      font-size: 14px;  
+    }
   }
 }

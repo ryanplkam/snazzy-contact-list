@@ -48,22 +48,16 @@ body {
   body h1 {
     font-family: 'Franchise-Bold';
     text-transform: uppercase;
-    font-size: 76px;
-    margin: 20px 0; }
-    @media only screen and (max-width: 991px) {
-      body h1 {
-        font-size: 70px; } }
+    font-size: 80px;
+    margin: 20px 0;
+    letter-spacing: 2px; }
     @media only screen and (max-width: 767px) {
       body h1 {
-        font-size: 66px;
         margin: 10px 0; } }
     @media only screen and (max-width: 543px) {
       body h1 {
-        font-size: 52px;
+        font-size: 66px;
         margin: 10px 0 5px; } }
-    body h1:after {
-      content: '\270C';
-      transition: 1s; }
   body .sidebar {
     height: 100%;
     margin-bottom: 10px; }
@@ -80,14 +74,19 @@ body {
         body .sidebar hr:last-of-type {
           visibility: visible; } }
   body .contacts-body .card {
-    margin: 10px 0; }
+    margin: 10px 0;
+    border: none; }
     body .contacts-body .card .card-header {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      border: none;
+      border-radius: 5px 5px 0 0; }
       body .contacts-body .card .card-header .octicon {
         font-size: 18px;
         line-height: 30.8px;
         cursor: pointer;
         margin-left: 15px; }
+    body .contacts-body .card > .list-group:last-child .list-group-item:last-child {
+      border-radius: 0 0 5px 5px; }
     body .contacts-body .card h4 {
       font-weight: 700;
       font-size: inherit;

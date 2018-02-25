@@ -1,2 +1,5 @@
-# snazzy-contact-list
-The snazziest contact list app ever made by a junior developer.
+# Snazzy Contacts
+A simple, persistent, and responsive contacts list app.
+
+# Motivation
+My take on the quintessential contact list app.
